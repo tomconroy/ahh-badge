@@ -1,0 +1,64 @@
+#badge {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 20;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  opacity: 1;
+}
+
+#badge.visible {
+  display: block;
+  -webkit-transition: opacity 0.3s; 
+  -moz-transition: opacity 0.3s; 
+  -o-transition: opacity 0.3s; 
+  transition: opacity 0.3s;
+}
+
+#badge.visible.fade {
+  opacity: 0;
+}
+
+#badge:hover {
+  cursor: pointer;
+}
+
+#badge:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+
+#badge-wrapper {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;  
+}
+
+#badge-image {
+  max-width: 70%;
+  height: auto;
+}
+
+@media all and (min-width: 420px) {
+  #badge-image {
+    max-width: 50%;
+  }
+  #badge {
+    background: url('badge-bg.png') center center no-repeat;
+    background-size: 500px 500px;
+    opacity: 1;
+  }
+}
+
+@media all and (min-width: 600px) {
+  #badge {
+    background-size: 800px 800px;
+  }
+}
