@@ -48,17 +48,11 @@
 
 @media all and (min-width: 420px) {
   #badge-image {
-    max-width: 50%;
+    max-width: 300px;
   }
   #badge {
     background: url('badge-bg.png') center center no-repeat;
     background-size: 500px 500px;
     opacity: 1;
-  }
-}
-
-@media all and (min-width: 600px) {
-  #badge {
-    background-size: 700px 700px;
   }
 }
