@@ -5,7 +5,7 @@ var AhhBadge = (function(){
       self.show();
       setTimeout(function(){
         self.hide();
-      }, 2000);
+      }, 4000);
     },
     show: function(){
       self.badge.className = 'visible';
