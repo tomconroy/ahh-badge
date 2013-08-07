@@ -1,6 +1,7 @@
 var AhhBadge = (function(){
   var self = {
-    init: function(){
+    init: function(callback){
+      self.closeCallback = callback;
       self.badge = document.getElementById('badge');
       self.show();
       setTimeout(function(){
@@ -17,6 +18,7 @@ var AhhBadge = (function(){
       self.badge.className = 'visible fade';
       setTimeout(function(){
         self.badge.className = '';
+        self.closeCallback && self.closeCallback();
       }, 300);
     }
   }
